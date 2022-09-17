@@ -72,9 +72,9 @@ struct CardContentView: View {
                                     if (self.maxID - 3)...self.maxID ~= user.id {
                                         CardView(card: user, onRemove: { removedUser in
                                             // Remove that user from our array
-                                            gameManagerVM.increment()
-                                            self.users.removeAll { $0.id == removedUser.id }
                                             gameManagerVM.verifyAnswer(index: removedUser.id)
+                                            self.users.removeAll { $0.id == removedUser.id }
+                                           
                                         })
                                         .frame(width: self.getCardWidth(geometry, id: user.id), height: 400)
                                         .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))

@@ -15,17 +15,18 @@ class CardManagerVM : GameManagerVM {
     
     @Published var cards = CardManagerVM.createGameCardModel(i: CardManagerVM.currentIndex)
     
-    var maxCardProgress = 5
+    var maxCardProgress = 9
     var progressedCards = 0
     
-    func increment() {
-        self.progressedCards+=1
-    }
-    
     func verifyAnswer(index: Int) {
-        if index >= maxCardProgress {
+        if progressedCards == maxCardProgress {
+            print(index)
             self.cards.cardCompleted = true
             self.cards.cardWinningStatus = true
+            print("verify-answer-if")
+        }else {
+            self.progressedCards+=1
+            print("verify-answer-else")
         }
     }
     
