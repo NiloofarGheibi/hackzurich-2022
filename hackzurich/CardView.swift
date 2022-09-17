@@ -69,9 +69,6 @@ struct CardView: View {
                                 .bold()
                         }
                         Spacer()
-                        
-                        Image(systemName: "info.circle")
-                            .foregroundColor(.gray)
                     }
                     .padding(.horizontal)
                 }

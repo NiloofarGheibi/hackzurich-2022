@@ -11,6 +11,8 @@
 		538F0AEA28D5D55E0029D19B /* LeaderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F0AE928D5D55E0029D19B /* LeaderPageView.swift */; };
 		538F0AEC28D5D8110029D19B /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F0AEB28D5D8110029D19B /* CardContentView.swift */; };
 		538F0AEE28D5D8420029D19B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F0AED28D5D8420029D19B /* CardView.swift */; };
+		538F0AF028D5EFF00029D19B /* CardManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F0AEF28D5EFF00029D19B /* CardManagerVM.swift */; };
+		538F0AF228D5F0300029D19B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538F0AF128D5F0300029D19B /* CardModel.swift */; };
 		53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */; };
 		53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51C28D05EB600EF06FF /* ContentView.swift */; };
 		53E0E51F28D05EB800EF06FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E0E51E28D05EB800EF06FF /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		538F0AE928D5D55E0029D19B /* LeaderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderPageView.swift; sourceTree = "<group>"; };
 		538F0AEB28D5D8110029D19B /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
 		538F0AED28D5D8420029D19B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		538F0AEF28D5EFF00029D19B /* CardManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManagerVM.swift; sourceTree = "<group>"; };
+		538F0AF128D5F0300029D19B /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		53E0E51728D05EB600EF06FF /* hackzurich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackzurich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackzurichApp.swift; sourceTree = "<group>"; };
 		53E0E51C28D05EB600EF06FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,9 +95,10 @@
 				5368476A28D54AA2001FDE74 /* HomePageView.swift */,
 				631A79DB28D5B156008D2EA7 /* GuessView.swift */,
 				631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */,
-				631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */,
 				538F0AEB28D5D8110029D19B /* CardContentView.swift */,
 				538F0AED28D5D8420029D19B /* CardView.swift */,
+				538F0AEF28D5EFF00029D19B /* CardManagerVM.swift */,
+				538F0AF128D5F0300029D19B /* CardModel.swift */,
 			);
 			path = hackzurich;
 			sourceTree = "<group>";
@@ -181,9 +186,11 @@
 				538F0AEA28D5D55E0029D19B /* LeaderPageView.swift in Sources */,
 				631A79DE28D5B46D008D2EA7 /* GuessSlider.swift in Sources */,
 				538F0AEE28D5D8420029D19B /* CardView.swift in Sources */,
+				538F0AF228D5F0300029D19B /* CardModel.swift in Sources */,
 				631A79D828D5430C008D2EA7 /* ReusableText.swift in Sources */,
 				53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */,
 				631A79D428D54307008D2EA7 /* OptionsGridView.swift in Sources */,
+				538F0AF028D5EFF00029D19B /* CardManagerVM.swift in Sources */,
 				53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */,
 				631A79DC28D5B156008D2EA7 /* GuessView.swift in Sources */,
 				538F0AEC28D5D8110029D19B /* CardContentView.swift in Sources */,
