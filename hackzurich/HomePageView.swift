@@ -17,7 +17,7 @@ struct HomePageView: View {
                 VStack (spacing: 0) {
                     VStack (spacing: 60){
                         Button(action: singlePlayer, label: {
-                            NavigationLink(destination: CardContentView()) {
+                            NavigationLink(destination: CardContentView(gameManagerVM: CardManagerVM())) {
                                 Text("Flash Cards")
                             }
                                     .padding()

@@ -15,11 +15,6 @@ struct MultiPageView : View {
         NavigationView {
             
             ZStack {
-                //Image("bg")
-                //     .resizable()
-                //     .aspectRatio(contentMode: ContentMode.fill)
-                //     .ignoresSafeArea()
-                
                 LinearGradient(colors: [.purple.opacity(0.4), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
                 if (gameManagerVM.model.quizCompleted) {

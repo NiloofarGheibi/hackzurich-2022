@@ -15,6 +15,7 @@ struct CardQuestion: Hashable {
 }
 
 struct CardContentView: View {
+    var gameManagerVM: CardManagerVM
     /// List of users
     @State var users: [CardQuestion] = [
         CardQuestion(id: 0, question: "Cindy", answer: true),
@@ -51,62 +52,64 @@ struct CardContentView: View {
     }
     
     var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.8945180774, green: 0.04201600701, blue: 0.2176240385, alpha: 1)), Color.init(#colorLiteral(red: 1, green: 0.9882352941, blue: 0.862745098, alpha: 1))]), startPoint: .bottom, endPoint: .top)
-                    .frame(width: geometry.size.width * 1.5, height: geometry.size.height)
-                    .background(Color.blue)
-                    .clipShape(Circle())
-                    .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
-                
-                VStack(spacing: 24) {
-                    TitleView()
-                    ZStack {
-                        ForEach(self.users, id: \.self) { user in
-                            Group {
-                                // Range Operator
-                                if (self.maxID - 3)...self.maxID ~= user.id {
-                                    CardView(card: user, onRemove: { removedUser in
-                                        // Remove that user from our array
-                                        self.users.removeAll { $0.id == removedUser.id }
-                                    })
+        if (gameManagerVM.cards.cardCompleted) {
+            QuizCompletedView(gameManagerVM: gameManagerVM)
+        } else {
+            VStack {
+                GeometryReader { geometry in
+                    LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.8945180774, green: 0.04201600701, blue: 0.2176240385, alpha: 1)), Color.init(#colorLiteral(red: 1, green: 0.9882352941, blue: 0.862745098, alpha: 1))]), startPoint: .bottom, endPoint: .top)
+                        .frame(width: geometry.size.width * 1.5, height: geometry.size.height)
+                        .background(Color.blue)
+                        .clipShape(Circle())
+                        .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
+                    
+                    VStack(spacing: 24) {
+                        TitleView()
+                        ZStack {
+                            ForEach(self.users, id: \.self) { user in
+                                Group {
+                                    // Range Operator
+                                    if (self.maxID - 3)...self.maxID ~= user.id {
+                                        CardView(card: user, onRemove: { removedUser in
+                                            // Remove that user from our array
+                                            gameManagerVM.verifyAnswer(index: removedUser.id)
+                                            self.users.removeAll { $0.id == removedUser.id }
+                                           
+                                        })
                                         .frame(width: self.getCardWidth(geometry, id: user.id), height: 400)
                                         .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))
+                                    }
                                 }
                             }
                         }
+                        Spacer()
                     }
-                    Spacer()
                 }
-            }
-        }.padding()
-    }
-}
-
-struct TitleView: View {
-    var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Match it right")
-                        .font(.title)
-                        .bold()
-                    Text("👈 no - yes 👉")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                }
-                Spacer()
             }.padding()
         }
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
     }
 }
-
+    
+    struct TitleView: View {
+        var body: some View {
+            VStack {
+                HStack {
+                    VStack(alignment: .center) {
+                        ReusableText(text: "Match it right", size: 30)
+                            .padding()
+                    }
+                    Spacer()
+                }.padding()
+            }
+            .background(Color.red)
+            .cornerRadius(10)
+            .shadow(radius: 5)
+        }
+    }
+    
 struct CardContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardContentView()
+        static var previews: some View {
+            CardContentView(gameManagerVM: CardManagerVM())
+        }
     }
-}
-
+    

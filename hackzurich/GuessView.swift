@@ -13,10 +13,7 @@ struct GuessView: View {
         NavigationView {
             VStack {
                 Spacer()
-                
-                //ReusableText(text: "Animal Knowledge Quiz!", size: 30)
-                //    .padding()
-                
+                            
                 ReusableText(text: "What is the typical level of energy consumption in a four-person household?", size: 25)
                     .lineLimit(3)
                     .frame(width: UIScreen.main.bounds.size.width - 20, height: 90, alignment: .center)
@@ -27,10 +24,7 @@ struct GuessView: View {
                 GuessSlider()
                     .padding()
                     
-                
                 Spacer()
-                
-
                 
                 Button(action: betting, label: {
                     NavigationLink(destination: LeaderPageView()) {
