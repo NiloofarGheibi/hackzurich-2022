@@ -2,7 +2,7 @@
 //  GameManagerVM.swift
 //  AKQuiz
 //
-//  Created by Isabelly Rochs
+//  Created by Rocha, Isabelly on 16.09.22.
 //
 
 import Foundation
@@ -52,7 +52,6 @@ class GameManagerVM : ObservableObject {
                 model.quizModel.optionsList[index].isMatched = false
                 model.quizModel.optionsList[index].isSelected = true
             }
-
         }
     }
     
@@ -78,12 +77,6 @@ class GameManagerVM : ObservableObject {
         timer.invalidate()
         self.progress = 0
     }
-    
-                                     
-                                     
-                                     
-                                
-
 }
 
 extension GameManagerVM

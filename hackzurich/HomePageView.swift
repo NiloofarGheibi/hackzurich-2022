@@ -10,7 +10,7 @@ import SwiftUI
 struct HomePageView: View {
     @State var navigated = false
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color.red
                
@@ -41,7 +41,7 @@ struct HomePageView: View {
                             })
                         
                         Button(action: betting, label: {
-                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())) {
+                            NavigationLink(destination: GuessView()) {
                                 Text("Bet!")
                             }
                                     .padding()
