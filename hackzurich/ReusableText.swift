@@ -13,7 +13,8 @@ struct ReusableText: View {
     var body: some View {
         Text(text)
             .font(.system(size: size, weight: .bold, design: .rounded))
-            .foregroundColor(.black)
-            .shadow(color: Color.white, radius: 2, x: 0, y: 3)
+            .foregroundColor(.white)
+
+            //.shadow(color: Color.white, radius: 2, x: 0, y: 3)
     }
 }

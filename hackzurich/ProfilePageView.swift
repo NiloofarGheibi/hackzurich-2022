@@ -67,11 +67,12 @@ struct Home : View {
             .padding(.horizontal)
             
             Dashboard(selected: $tab)
+                .padding()
             
             Spacer()
             
         }
-        .background(Image("bg_profile").ignoresSafeArea(.all, edges: .all)).scaledToFill()
+        .background(Image("bg_share").scaledToFill().ignoresSafeArea(.all, edges: .all))
         
     }
 }
@@ -168,11 +169,11 @@ struct ProductView : View {
                 VStack(alignment: .leading, spacing: 22) {
                     
                     Text(sales.title)
-                        .foregroundColor(.white)
+                        .foregroundColor(.red)
                         .font(.title2)
                         .fontWeight(.bold)
                     Text(sales.value)
-                        .foregroundColor(.white)
+                        .foregroundColor(.red)
                 }
                 
                 Spacer(minLength: 0)
