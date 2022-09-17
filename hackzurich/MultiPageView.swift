@@ -18,11 +18,8 @@ struct MultiPageView : View {
                         QuizCompletedView(gameManagerVM: gameManagerVM)
                 } else {
                     VStack {
-                        ReusableText(text: "Animal Knowledge Quiz!", size: 30)
-                            .padding()
-                        
-                        ReusableText(text: gameManagerVM.model.quizModel.question, size: 25)
-                            .lineLimit(3)
+                        ReusableText(text: gameManagerVM.model.quizModel.question, size: 16)
+                            .lineLimit(5)
                             .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
                             .multilineTextAlignment(.center)
                         
@@ -54,7 +51,7 @@ struct MultiPageView : View {
                         Spacer()
                     }
                 }
-            }.background(Image("bg_guess")
+            }.background(Image("bg_iceberg")
                 .scaledToFill()
                 .opacity(0.4)
                 .ignoresSafeArea(.all, edges: .all))

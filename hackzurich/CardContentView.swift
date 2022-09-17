@@ -25,7 +25,7 @@ struct CardContentView: View {
         CardQuestion(id: 4, image: "bg_dry", question: "In the past 7500 years, it has never been as warm in the Arctic as it is now", answer: true),
         CardQuestion(id: 5, image: "bg_tree", question: "Over the past 150 years the average annual air temperature in Switzerland has risen by around 2 °C, which is twice the global average", answer: true),
         CardQuestion(id: 6, image: "bg_cable", question: "The Swiss glaciers have already lost 5% of their volume since 1850", answer: false),
-        CardQuestion(id: 7, image: "bg_share", question: "Water consumption has decreased slightly since the 1990s, but has begun to increase again in recent years",answer: true),
+        CardQuestion(id: 7, image: "bg_share", question: "The rise in heavy rainfall events is likely to continue. ",answer: true),
         CardQuestion(id: 8, image: "bg_dry", question: "The temperatures of most watercourses have increased significantly since the 1970s",answer: true),
         CardQuestion(id: 9, image: "bg_mountain", question: "Plateau to rise by a further 2–3°C by the end of the 21st century", answer: false)
     ]
