@@ -10,7 +10,7 @@ import SwiftUI
 struct GuessView: View {
     var body: some View {
         
-        NavigationView {
+        //NavigationView {
             VStack {
                 Spacer()
                             
@@ -26,7 +26,7 @@ struct GuessView: View {
                     
                 Spacer()
                 
-                Button(action: betting, label: {
+                Button(action: guessing, label: {
                     NavigationLink(destination: LeaderPageView()) {
                         Text("Submit Guess!")
                     }
@@ -44,7 +44,7 @@ struct GuessView: View {
                 .opacity(0.6)
                 .ignoresSafeArea(.all, edges: .all))
         }
-    }
+    //}
 }
 
 struct GuessView_Previews: PreviewProvider {
