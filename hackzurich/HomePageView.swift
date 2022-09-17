@@ -18,7 +18,7 @@ struct HomePageView: View {
                     VStack (spacing: 60){
                         Button(action: singlePlayer, label: {
                             NavigationLink(destination: CardContentView()) {
-                                Text("Single Player")
+                                Text("Flash Cards")
                             }
                                     .padding()
                                     .frame(width:300)
@@ -30,7 +30,7 @@ struct HomePageView: View {
                         
                         Button(action: multiPlayer, label: {
                             NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())) {
-                                Text("Multi Player")
+                                Text("Multiple-Choice Quizz")
                             }
                                     .padding()
                                     .frame(width:300)
@@ -42,7 +42,7 @@ struct HomePageView: View {
                         
                         Button(action: betting, label: {
                             NavigationLink(destination: GuessView()) {
-                                Text("Bet!")
+                                Text("Take a Guess")
                             }
                                     .padding()
                                     .frame(width:300)

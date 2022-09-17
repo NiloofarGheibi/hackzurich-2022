@@ -33,7 +33,7 @@ struct GuessView: View {
 
                 
                 Button(action: betting, label: {
-                    NavigationLink(destination: LeaderboardView()) {
+                    NavigationLink(destination: LeaderPageView()) {
                         Text("Submit Guess!")
                     }
                             .padding()
