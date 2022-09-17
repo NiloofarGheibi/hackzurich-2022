@@ -21,7 +21,6 @@
 		631A79DA28D545E7008D2EA7 /* MultiPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79D928D545E7008D2EA7 /* MultiPageView.swift */; };
 		631A79DC28D5B156008D2EA7 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DB28D5B156008D2EA7 /* GuessView.swift */; };
 		631A79DE28D5B46D008D2EA7 /* GuessSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */; };
-		631A79E028D5C9EE008D2EA7 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		631A79D928D545E7008D2EA7 /* MultiPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPageView.swift; sourceTree = "<group>"; };
 		631A79DB28D5B156008D2EA7 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessSlider.swift; sourceTree = "<group>"; };
-		631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		631A79E128D5CFE8008D2EA7 /* hackzurich.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackzurich.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +56,6 @@
 		53E0E50E28D05EB600EF06FF = {
 			isa = PBXGroup;
 			children = (
-				538F0AE928D5D55E0029D19B /* LeaderPageView.swift */,
 				53E0E51928D05EB600EF06FF /* hackzurich */,
 				53E0E51828D05EB600EF06FF /* Products */,
 			);
@@ -75,6 +72,7 @@
 		53E0E51928D05EB600EF06FF /* hackzurich */ = {
 			isa = PBXGroup;
 			children = (
+				538F0AE928D5D55E0029D19B /* LeaderPageView.swift */,
 				631A79E128D5CFE8008D2EA7 /* hackzurich.entitlements */,
 				631A79D128D54303008D2EA7 /* QuizModel.swift */,
 				631A79D328D54306008D2EA7 /* OptionsGridView.swift */,
@@ -89,7 +87,6 @@
 				5368476A28D54AA2001FDE74 /* HomePageView.swift */,
 				631A79DB28D5B156008D2EA7 /* GuessView.swift */,
 				631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */,
-				631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */,
 			);
 			path = hackzurich;
 			sourceTree = "<group>";
@@ -177,7 +174,6 @@
 				538F0AEA28D5D55E0029D19B /* LeaderPageView.swift in Sources */,
 				631A79DE28D5B46D008D2EA7 /* GuessSlider.swift in Sources */,
 				631A79D828D5430C008D2EA7 /* ReusableText.swift in Sources */,
-				631A79E028D5C9EE008D2EA7 /* LeaderboardView.swift in Sources */,
 				53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */,
 				631A79D428D54307008D2EA7 /* OptionsGridView.swift in Sources */,
 				53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */,
