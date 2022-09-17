@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5368476B28D54AA2001FDE74 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368476A28D54AA2001FDE74 /* HomePageView.swift */; };
 		53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */; };
 		53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51C28D05EB600EF06FF /* ContentView.swift */; };
 		53E0E51F28D05EB800EF06FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E0E51E28D05EB800EF06FF /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5368476A28D54AA2001FDE74 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		53E0E51728D05EB600EF06FF /* hackzurich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackzurich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackzurichApp.swift; sourceTree = "<group>"; };
 		53E0E51C28D05EB600EF06FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				53E0E51E28D05EB800EF06FF /* Assets.xcassets */,
 				53E0E52028D05EB800EF06FF /* Preview Content */,
 				631A79D928D545E7008D2EA7 /* MultiPageView.swift */,
+				5368476A28D54AA2001FDE74 /* HomePageView.swift */,
 			);
 			path = hackzurich;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				631A79D428D54307008D2EA7 /* OptionsGridView.swift in Sources */,
 				53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */,
 				631A79D628D5430A008D2EA7 /* QuizCompletedView.swift in Sources */,
+				5368476B28D54AA2001FDE74 /* HomePageView.swift in Sources */,
 				631A79DA28D545E7008D2EA7 /* MultiPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

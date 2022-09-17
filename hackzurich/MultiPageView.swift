@@ -62,7 +62,6 @@ struct MultiPageView : View {
                     }
                 }
             }
-            .navigationTitle("Home")
         }
     }
 }
