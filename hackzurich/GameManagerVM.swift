@@ -99,10 +99,10 @@ extension GameManagerVM
             
             QuizModel(question: "Water consumption has decreased slightly since the 1990s, and in the recent years?",
                       answer: "A",
-                      optionsList: [QuizOption(id: 31,optionId: "A", option: "it has begun to increase", color: Color.yellow),
-                                    QuizOption(id: 32,optionId: "B", option: "it decreased significantly", color: Color.red),
-                                    QuizOption(id: 33,optionId: "C", option: "it increased significantly", color: Color.green),
-                                    QuizOption(id: 34,optionId: "D", option: "it is stable", color: Color.purple)]),
+                      optionsList: [QuizOption(id: 31,optionId: "A", option: "increasing", color: Color.yellow),
+                                    QuizOption(id: 32,optionId: "B", option: "decreased", color: Color.red),
+                                    QuizOption(id: 33,optionId: "C", option: "increased", color: Color.green),
+                                    QuizOption(id: 34,optionId: "D", option: "stable", color: Color.purple)]),
             
             QuizModel(question: "What is the largest water storage resource in Switzerland?",
                       answer: "A",
