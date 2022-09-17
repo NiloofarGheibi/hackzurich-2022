@@ -19,6 +19,9 @@
 		631A79D628D5430A008D2EA7 /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79D528D5430A008D2EA7 /* QuizCompletedView.swift */; };
 		631A79D828D5430C008D2EA7 /* ReusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79D728D5430C008D2EA7 /* ReusableText.swift */; };
 		631A79DA28D545E7008D2EA7 /* MultiPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79D928D545E7008D2EA7 /* MultiPageView.swift */; };
+		631A79DC28D5B156008D2EA7 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DB28D5B156008D2EA7 /* GuessView.swift */; };
+		631A79DE28D5B46D008D2EA7 /* GuessSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */; };
+		631A79E028D5C9EE008D2EA7 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,10 @@
 		631A79D528D5430A008D2EA7 /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
 		631A79D728D5430C008D2EA7 /* ReusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableText.swift; sourceTree = "<group>"; };
 		631A79D928D545E7008D2EA7 /* MultiPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPageView.swift; sourceTree = "<group>"; };
+		631A79DB28D5B156008D2EA7 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessSlider.swift; sourceTree = "<group>"; };
+		631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		631A79E128D5CFE8008D2EA7 /* hackzurich.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackzurich.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,7 @@
 		53E0E51928D05EB600EF06FF /* hackzurich */ = {
 			isa = PBXGroup;
 			children = (
+				631A79E128D5CFE8008D2EA7 /* hackzurich.entitlements */,
 				631A79D128D54303008D2EA7 /* QuizModel.swift */,
 				631A79D328D54306008D2EA7 /* OptionsGridView.swift */,
 				631A79CF28D54286008D2EA7 /* GameManagerVM.swift */,
@@ -79,6 +87,9 @@
 				53E0E52028D05EB800EF06FF /* Preview Content */,
 				631A79D928D545E7008D2EA7 /* MultiPageView.swift */,
 				5368476A28D54AA2001FDE74 /* HomePageView.swift */,
+				631A79DB28D5B156008D2EA7 /* GuessView.swift */,
+				631A79DD28D5B46D008D2EA7 /* GuessSlider.swift */,
+				631A79DF28D5C9EE008D2EA7 /* LeaderboardView.swift */,
 			);
 			path = hackzurich;
 			sourceTree = "<group>";
@@ -164,10 +175,13 @@
 				631A79D228D54303008D2EA7 /* QuizModel.swift in Sources */,
 				631A79D028D54286008D2EA7 /* GameManagerVM.swift in Sources */,
 				538F0AEA28D5D55E0029D19B /* LeaderPageView.swift in Sources */,
+				631A79DE28D5B46D008D2EA7 /* GuessSlider.swift in Sources */,
 				631A79D828D5430C008D2EA7 /* ReusableText.swift in Sources */,
+				631A79E028D5C9EE008D2EA7 /* LeaderboardView.swift in Sources */,
 				53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */,
 				631A79D428D54307008D2EA7 /* OptionsGridView.swift in Sources */,
 				53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */,
+				631A79DC28D5B156008D2EA7 /* GuessView.swift in Sources */,
 				631A79D628D5430A008D2EA7 /* QuizCompletedView.swift in Sources */,
 				5368476B28D54AA2001FDE74 /* HomePageView.swift in Sources */,
 				631A79DA28D545E7008D2EA7 /* MultiPageView.swift in Sources */,
@@ -296,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackzurich/hackzurich.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackzurich/Preview Content\"";
@@ -324,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackzurich/hackzurich.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackzurich/Preview Content\"";
