@@ -9,49 +9,76 @@ import SwiftUI
 
 struct LeaderPageView: View {
     struct Leader: Hashable, Identifiable {
-            let name: String
-            let score: Int
-            let id = UUID()
+        let name: String
+        let score: Int
+        let image: String
+        let id = UUID()
+    }
+    
+    struct LeaderSection: Identifiable {
+        let name: String
+        let leaders: [Leader]
+        let id = UUID()
+    }
+    
+    struct LeadView : View {
+        var leader : Leader
+        
+        var body : some View {
+            ZStack {
+                HStack {
+                    Image(leader.image)
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .cornerRadius(50)
+                    
+                    Spacer(minLength: 10)
+                    
+                    VStack(alignment: .leading, spacing: 22) {
+                        
+                        Text(leader.name)
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        
+                        Text(String(leader.score))
+                            .foregroundColor(.red)
+                    }
+                    
+                    Spacer(minLength: 10)
+                }
+                .padding()
+            }
+            .cornerRadius(10)
+            .frame(width: 350)
+            .background(.secondary)
         }
-
-        struct LeaderSection: Identifiable {
-            let name: String
-            let seas: [Leader]
-            let id = UUID()
-        }
-
-        private let oceanRegions: [LeaderSection] = [
-            LeaderSection(name: "Top 5 Players 🚀",
-                        seas: [Leader(name: "John", score: Int.random(in: 0..<60)),
-                               Leader(name: "Jane", score: Int.random(in: 0..<23)),
-                               Leader(name: "Julia", score: Int.random(in: 0..<24324)),
-                               Leader(name: "Josh", score: Int.random(in: 0..<124))]),
-            LeaderSection(name: "Game Changers 🎯",
-                        seas: [Leader(name: "Jim", score: 1)]),
-            LeaderSection(name: "New Joiners 👯‍♂️",
-                        seas: [Leader(name: "Jack", score: Int.random(in: 0..<78883)),
-                               Leader(name: "Jose", score: Int.random(in: 0..<65)),
-                               Leader(name: "Jenny", score: Int.random(in: 0..<3))]),
-        ]
-
-        @State private var singleSelection: UUID?
-
+        
+    }
+    
+    private let oceanRegions: [LeaderSection] = [
+        LeaderSection(name: "Top 5 Players 🚀",
+                      leaders: [Leader(name: "Alex", score: Int.random(in: 0..<204324), image: "alex"),
+                                Leader(name: "You", score: Int.random(in: 0..<19999), image: "you"),
+                                Leader(name: "Josh", score: Int.random(in: 0..<10209), image: "josh"),
+                                Leader(name: "Julia", score: Int.random(in: 0..<965), image: "julia"),
+                                Leader(name: "Jane", score: Int.random(in: 0..<490), image: "jane")
+                               ])]
+    
+    @State private var singleSelection: UUID?
+    
     var body: some View {
-        ZStack{
-            List(selection: $singleSelection) {
+        VStack {
                 ForEach(oceanRegions) { region in
-                    Section(header: Text(region.name)) {
-                        ForEach(region.seas) { sea in
-                            Text(sea.name + "->" + String(sea.score))
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                        }
+                    ForEach(region.leaders) { lead in
+                        LeadView(leader: lead)
                     }
                 }
-            }
-        }
+        }.background(Image("bg_guess").ignoresSafeArea(.all, edges: .all)).scaledToFill()
     }
 }
+
+
 
 struct LeaderPageView_Previews: PreviewProvider {
     static var previews: some View {

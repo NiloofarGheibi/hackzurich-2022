@@ -57,16 +57,6 @@ struct Home : View {
             }
             .padding()
             
-            //HStack {
-            //    Text("Dashboard")
-            //        .font(.title2)
-            //        .fontWeight(.bold)
-            //        .foregroundColor(.white)
-            //
-            //    Spacer(minLength: 0)
-            //}
-            //.padding()
-            
             HStack(spacing: 0) {
                 TabButton(selected: $tab, title: "MarketPlace", animation: animation)
                 TabButton(selected: $tab, title: "Donation", animation: animation)
