@@ -26,7 +26,7 @@ struct GuessSlider: View {
             isEditing = editing
         }
         Text(String(format: "%.f kWh", speed))
-            .foregroundColor(isEditing ? .purple : .blue)
+            .foregroundColor(isEditing ? .red : .white)
     }
 }
 

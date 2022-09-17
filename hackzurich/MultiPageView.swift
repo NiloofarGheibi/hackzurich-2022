@@ -13,12 +13,11 @@ struct MultiPageView : View {
     var body: some View {
         
         NavigationView {
-            
             ZStack {
-                LinearGradient(colors: [.purple.opacity(0.4), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(colors: [.red.opacity(0.4), .white.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
                 if (gameManagerVM.model.quizCompleted) {
-                    QuizCompletedView(gameManagerVM: gameManagerVM)
+                        QuizCompletedView(gameManagerVM: gameManagerVM)
                 } else {
                     VStack {
                         ReusableText(text: "Animal Knowledge Quiz!", size: 30)

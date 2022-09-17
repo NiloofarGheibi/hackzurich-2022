@@ -12,7 +12,6 @@ struct ProfilePageView: View {
         NavigationView {
 
             Home()
-                //.preferredColorScheme(.white)
                 .navigationTitle("")
                 .navigationBarHidden(true)
         }

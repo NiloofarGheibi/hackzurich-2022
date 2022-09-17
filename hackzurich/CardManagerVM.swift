@@ -51,10 +51,10 @@ extension CardManagerVM
 {
     static var cardData: [CardModel] {
         [
-            CardModel(question: "Are the glaciers already melting?", answer: true),
-            CardModel(question: "Is it too late to prevent climate change?", answer: false),
-            CardModel(question: "Are the glaciers already melting1?", answer: true),
-            CardModel(question: "Is it too late to prevent climate change1?", answer: false)
+            CardModel(image: "bg_1", question: "Are the glaciers already melting?", answer: true),
+            CardModel(image: "bg_1", question: "Is it too late to prevent climate change?", answer: false),
+            CardModel(image: "bg_1", question: "Are the glaciers already melting1?", answer: true),
+            CardModel(image: "bg_1", question: "Is it too late to prevent climate change1?", answer: false)
         ]
     }
 }
