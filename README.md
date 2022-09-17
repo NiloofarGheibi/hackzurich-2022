@@ -1,36 +1,39 @@
 <h2 align="center">Hackzurich 2022</h2>
+<br />
+<p align="center">
+  <a href="https://github.com/NiloofarGheibi/hackzurich-2022">
+    <img src="logo.png" alt="Logo" width="250" height="200">
+  </a>
 
+<h2 align="center">Hackzurich 2022</h2>
 
 ## Inspiration
 
 ## What it does
 
-
-## How we built it
-
-- Used the power of SwiftUI development.
-
 ## Accomplishments that we're proud of
 
 * Creating a team of four that all of us are girls!
 * Collaborating with three different nationalities.
-* Managed to have shape a Hybrid team, one member based in Brazil with 5 hours time zone difference.
 * We got out of our comfort zone and push ourselves to the limits.
+* Used the Generation Z apps for our pitch video 🎬
 
 ## What we learned
 
 * Design thinking approach helps to bring creative ideas.
-* Customer Focus
+* Making trade offs are vital to deliver the first MVP.
 
 ## What's next for Quizzerland
 
 * Integrating more analysis features based on the collected data.
-* Giving employees the chance of entering what kind of action points they expect from employers when they are not feeling well.
-* Transforming the web app to desktop app to even decrease more the action points required for the user.  
+* Providing market place for local shops and sustainable producers to showcase and promote their products.
+* Expand on question database.
+* Explore data visualization for quizes from the projection with more.
+* Expand partnerships to enable good causes from government and NGOs to get donations and engage with citizens.  
+* Giving citizens the chance of spending their collected earn points.
+* Providing badges and certificates to users of the application as part of reward program.  
+* Providing Andriod and Web application to target wider audience.  
 
 ## Built with
 
-- Languages: Golang, Python, Java Script
-- Frameworks: Victory
-- Libraries: React, Tensorflow, Keras
-- Cloud services: Microsoft Azure
+- Languages: Swift, SwiftUI
