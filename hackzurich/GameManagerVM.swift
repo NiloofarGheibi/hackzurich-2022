@@ -83,26 +83,40 @@ extension GameManagerVM
 {
     static var quizData: [QuizModel] {
         [
-            QuizModel(question: "Which is the fastest animal in the world?",
-                      answer: "B",
-                      optionsList: [QuizOption(id: 11, optionId: "A", option: "Turtle", color: Color.yellow),
-                                    QuizOption(id: 12,optionId: "B", option: "Cheetah", color: Color.red),
-                                    QuizOption(id: 13,optionId: "C", option: "Rabbit", color: Color.green),
-                                    QuizOption(id: 14,optionId: "D", option: "Leoprd", color: Color.purple)]),
-            
-            QuizModel(question: "Which of these animals swims in upright position?",
+            QuizModel(question: "How many of the ten hottest years have already occurred since 2000?",
                       answer: "C",
-                      optionsList: [QuizOption(id: 21,optionId: "A", option: "Sea Lion", color: Color.yellow),
-                                    QuizOption(id: 22,optionId: "B", option: "Sea Urchin", color: Color.red),
-                                    QuizOption(id: 23,optionId: "C", option: "Seahorse", color: Color.green),
-                                    QuizOption(id: 24,optionId: "D", option: "Sea slug", color: Color.purple)]),
+                      optionsList: [QuizOption(id: 11, optionId: "A", option: "2", color: Color.yellow),
+                                    QuizOption(id: 12,optionId: "B", option: "3", color: Color.red),
+                                    QuizOption(id: 13,optionId: "C", option: "9", color: Color.green),
+                                    QuizOption(id: 14,optionId: "D", option: "10", color: Color.purple)]),
             
-            QuizModel(question: "Which is the world largest living fish?",
-                      answer: "B",
-                      optionsList: [QuizOption(id: 31,optionId: "A", option: "Manta Ray", color: Color.yellow),
-                                    QuizOption(id: 32,optionId: "B", option: "Whale Shark", color: Color.red),
-                                    QuizOption(id: 33,optionId: "C", option: "Marlin", color: Color.green),
-                                    QuizOption(id: 34,optionId: "D", option: "Sailfish", color: Color.purple)])
+            QuizModel(question: "The annual average temperature will rise by how many degrees by the end of the century?",
+                      answer: "A",
+                      optionsList: [QuizOption(id: 21,optionId: "A", option: "3.3 to 5.4 °C", color: Color.yellow),
+                                    QuizOption(id: 22,optionId: "B", option: "2.0 to 6.6 °C", color: Color.red),
+                                    QuizOption(id: 23,optionId: "C", option: "1.5 to 2.0 °C", color: Color.green),
+                                    QuizOption(id: 24,optionId: "D", option: "not much", color: Color.purple)]),
+            
+            QuizModel(question: "Water consumption has decreased slightly since the 1990s, and in the recent years?",
+                      answer: "A",
+                      optionsList: [QuizOption(id: 31,optionId: "A", option: "it has begun to increase", color: Color.yellow),
+                                    QuizOption(id: 32,optionId: "B", option: "it decreased significantly", color: Color.red),
+                                    QuizOption(id: 33,optionId: "C", option: "it increased significantly", color: Color.green),
+                                    QuizOption(id: 34,optionId: "D", option: "it is stable", color: Color.purple)]),
+            
+            QuizModel(question: "What is the largest water storage resource in Switzerland?",
+                      answer: "A",
+                      optionsList: [QuizOption(id: 31,optionId: "A", option: "Groundwater", color: Color.yellow),
+                                    QuizOption(id: 32,optionId: "B", option: "Lakes", color: Color.red),
+                                    QuizOption(id: 33,optionId: "C", option: "Rivers", color: Color.green),
+                                    QuizOption(id: 34,optionId: "D", option: "Damm", color: Color.purple)]),
+            
+            QuizModel(question: "How many percent of the 22,500 km of piste in Switzerland were created with artificial snow in 2016?",
+                      answer: "C",
+                      optionsList: [QuizOption(id: 31,optionId: "A", option: "5%", color: Color.yellow),
+                                    QuizOption(id: 32,optionId: "B", option: "10%", color: Color.red),
+                                    QuizOption(id: 33,optionId: "C", option: "49%", color: Color.green),
+                                    QuizOption(id: 34,optionId: "D", option: "20%", color: Color.purple)])
         ]
     }
 }

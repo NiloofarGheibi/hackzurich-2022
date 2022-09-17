@@ -18,37 +18,16 @@ struct QuizCompletedView: View {
                 .frame(width: 90, height: 80)
                 .foregroundColor(.white)
                 .cornerRadius(50)
-                //.foregroundColor(Color.white)
-                //.font(.system(size: 60))
-                //.padding()
-            
+
             ReusableText(text: "Congratulations!",
                          size: 30)
                 .padding()
             
-            ReusableText(text: "You have just earned 400 Green Coins.",
+            ReusableText(text: "You have just earned " + String(Int.random(in: 0..<409)) + " Green Coins.",
                          size: 30)
                 .frame(width:300)
                 .padding()
-            
-            //Button {
-            //    gameManagerVM.restartGame()
-            //} label: {
-            //    HStack {
-            //        Image(systemName: "play.fill")
-            //            .foregroundColor(.white)
-            //            .font(.system(size: 24))
-            //            .padding()
-                    
-            //        Text("Play Again")
-            //            .foregroundColor(.white)
-            //            .font(.system(size: 24, weight: .bold, design: .rounded))
-            //    }
-            //}.frame(width: 300, height: 60, alignment: .center)
-            //    .background(.red)
-            //    .cornerRadius(30)
-            //    .padding()
-            
+    
             Spacer()
             
             Link(destination: URL(string: "https://twitter.com/intent/tweet?text=Hey!%20I%20just%20learned%20about%20%23climatechange%20in%20%23Switzerland,%20come%20and%20join%20me%20in%20app%20%40quizerland%20to%20learn%20more!")!) {
