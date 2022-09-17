@@ -23,7 +23,7 @@ struct QuizCompletedView: View {
                          size: 30)
                 .padding()
             
-            ReusableText(text: "You have just earned " + String(Int.random(in: 0..<409)) + " Green Coins.",
+            ReusableText(text: "You have just earned " + String(Int.random(in: 400..<1200)) + " Green Coins.",
                          size: 30)
                 .frame(width:300)
                 .padding()
