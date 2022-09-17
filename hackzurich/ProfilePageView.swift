@@ -12,7 +12,6 @@ struct ProfilePageView: View {
         NavigationView {
 
             Home()
-                //.preferredColorScheme(.white)
                 .navigationTitle("")
                 .navigationBarHidden(true)
         }
@@ -82,7 +81,7 @@ struct Home : View {
             Spacer()
             
         }
-        .background(Image("bg_profile").ignoresSafeArea(.all, edges: .all))
+        .background(Image("bg_profile").ignoresSafeArea(.all, edges: .all)).scaledToFill()
         
     }
 }

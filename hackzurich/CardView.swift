@@ -59,7 +59,7 @@ struct CardView: View {
                 }
                 .padding(.leading)
                 .frame(width: 360, height: 420)
-                .background(Color.white)
+                .background(Image("\(self.card.image)").ignoresSafeArea(.all, edges: .all))
                 .cornerRadius(10)
                 .shadow(radius: 5)
                 .offset(x: self.translation.width, y: 0)
@@ -67,6 +67,9 @@ struct CardView: View {
                 .gesture(
                     DragGesture()
                         .onChanged { value in
+                            withAnimation(.spring()) {
+                                print("animation")
+                            }
                             self.translation = value.translation
                             if (self.getGesturePercentage(geometry, from: value)) >= self.thresholdPercentage {
                                 self.swipeStatus = .like
@@ -77,7 +80,9 @@ struct CardView: View {
                             }
                             
                         }.onEnded { value in
-                            withAnimation(.interactiveSpring()){}
+                            withAnimation(.spring()) {
+                                print("animation")
+                            }
                             // determine snap distance > 0.5 aka half the width of the screen
                             if abs(self.getGesturePercentage(geometry, from: value)) > self.thresholdPercentage {
                                 self.onRemove(self.card)
@@ -93,7 +98,7 @@ struct CardView: View {
     
     struct CardView_Previews: PreviewProvider {
         static var previews: some View {
-            CardView(card: CardQuestion(id: 1, question: "Mark", answer: true),
+            CardView(card: CardQuestion(id: 1, image: "bg_share", question: "Mark", answer: true),
                      onRemove: { _ in
                 // do nothing
             })

@@ -15,6 +15,7 @@ struct CardQuiz {
 }
 
 struct CardModel: Hashable {
+    let image: String
     let question: String
     let answer: Bool
 }

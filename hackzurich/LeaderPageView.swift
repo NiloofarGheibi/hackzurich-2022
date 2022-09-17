@@ -36,21 +36,22 @@ struct LeaderPageView: View {
 
         @State private var singleSelection: UUID?
 
-        var body: some View {
-            NavigationView {
-                List(selection: $singleSelection) {
-                    ForEach(oceanRegions) { region in
-                        Section(header: Text(region.name)) {
-                            ForEach(region.seas) { sea in
-                                Text(sea.name + "->" + String(sea.score))
-                            }
+    var body: some View {
+        ZStack{
+            List(selection: $singleSelection) {
+                ForEach(oceanRegions) { region in
+                    Section(header: Text(region.name)) {
+                        ForEach(region.seas) { sea in
+                            Text(sea.name + "->" + String(sea.score))
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
                         }
                     }
                 }
-                .navigationTitle("Leaders")
             }
         }
     }
+}
 
 struct LeaderPageView_Previews: PreviewProvider {
     static var previews: some View {

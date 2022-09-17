@@ -13,12 +13,9 @@ struct MultiPageView : View {
     var body: some View {
         
         NavigationView {
-            
             ZStack {
-                LinearGradient(colors: [.purple.opacity(0.4), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
                 if (gameManagerVM.model.quizCompleted) {
-                    QuizCompletedView(gameManagerVM: gameManagerVM)
+                        QuizCompletedView(gameManagerVM: gameManagerVM)
                 } else {
                     VStack {
                         ReusableText(text: "Animal Knowledge Quiz!", size: 30)
@@ -50,13 +47,17 @@ struct MultiPageView : View {
                             ReusableText(text: String(gameManagerVM.progress), size: 30)
                         }.frame(width: 150, height: 150)
                         
-                        
                         Spacer()
                         
                         OptionsGridView(gameManagerVM: gameManagerVM)
+                        
+                        Spacer()
                     }
                 }
-            }
+            }.background(Image("bg_guess")
+                .scaledToFill()
+                .opacity(0.4)
+                .ignoresSafeArea(.all, edges: .all))
         }
     }
 }

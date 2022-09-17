@@ -45,11 +45,11 @@ struct OptionCardView : View {
     
     func setBackgroundColor() -> Color {
         if (quizOption.isMatched) && (quizOption.isSelected) {
-            return Color.green
+            return Color.green.opacity(0.5)
         } else if (!(quizOption.isMatched) && (quizOption.isSelected)) {
-            return Color.red
+            return Color.red.opacity(0.5)
         } else {
-            return Color.white
+            return Color.secondary.opacity(0.5)
         }
     }
 }
@@ -64,10 +64,12 @@ struct OptionView: View {
                 .background(quizOption.color.opacity(0.8))
                 .foregroundColor(.white)
                 .cornerRadius(25)
+                .padding()
             
             Text(quizOption.option)
                 .frame(width: 150, height: 38)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                .padding()
         }
     }
 }

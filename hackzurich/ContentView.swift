@@ -11,7 +11,6 @@ struct HomeView : View {
     var body: some View {
         NavigationView {
              HomePageView()
-            //.navigationTitle("Home")
         }
     }
 }
@@ -23,8 +22,6 @@ struct ProfileView : View {
                 Color.blue
                 ProfilePageView()
             }
-            
-            //.navigationTitle("Profile")
         }
     }
 }
@@ -32,15 +29,18 @@ struct ProfileView : View {
 struct LeaderBoardView : View {
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.green
-            }
-            //.navigationTitle("Leader Board")
+           LeaderPageView()
         }
     }
 }
 
 struct ContentView: View {
+    init() {
+            UITabBar.appearance().backgroundColor = UIColor.red
+            UITabBar.appearance().isOpaque = false
+            UITabBar.appearance().unselectedItemTintColor = UIColor.white
+            UITabBar.appearance().tintColor = UIColor.black
+    }
     var body: some View {
         TabView {
             HomeView()
@@ -54,13 +54,12 @@ struct ContentView: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }
-            
             LeaderBoardView()
                 .tabItem {
                     Image(systemName: "person.3.sequence")
                     Text("Leader Board")
                 }
-        }
+        }.accentColor(.white)
     }
 }
 

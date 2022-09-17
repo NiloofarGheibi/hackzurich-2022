@@ -12,48 +12,49 @@ struct HomePageView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.red
-               
                 VStack (spacing: 0) {
-                    VStack (spacing: 60){
+                    VStack (spacing: 80){
                         Button(action: singlePlayer, label: {
-                            NavigationLink(destination: CardContentView(gameManagerVM: CardManagerVM())) {
+                            NavigationLink(destination: CardContentView(gameManagerVM: CardManagerVM())){
                                 Text("Flash Cards")
-                            }
                                     .padding()
                                     .frame(width:300)
-                                    .font(.system(size: 14))
-                                    .cornerRadius(10)
-                                    .background(Color.white)
-                                    .foregroundColor(Color.black)
-                            })
+                                    .background(.red)
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .cornerRadius(15)
+                            }})
                         
-                        Button(action: multiPlayer, label: {
-                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())) {
-                                Text("Multiple-Choice")
-                            }
+                        Button(action: singlePlayer, label: {
+                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())){
+                                Text("Multiple Choice")
                                     .padding()
+                                    .font(.system(size: 20))
                                     .frame(width:300)
-                                    .font(.system(size: 14))
-                                    .cornerRadius(10)
-                                    .background(Color.white)
-                                    .foregroundColor(Color.black)
-                            })
+                                    .background(.red)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.white)
+                                    .cornerRadius(15)
+                            }})
                         
-                        Button(action: betting, label: {
-                            NavigationLink(destination: GuessView()) {
-                                Text("Take a Guess")
-                            }
+                        
+                        Button(action: singlePlayer, label: {
+                            NavigationLink(destination: GuessView()){
+                                Text("Guess Game")
                                     .padding()
+                                    .font(.system(size: 20))
                                     .frame(width:300)
-                                    .font(.system(size: 14))
-                                    .cornerRadius(10)
-                                    .background(Color.white)
-                                    .foregroundColor(Color.black)
-                            })
+                                    .background(.red)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.white)
+                                    .cornerRadius(15)
+                            }})
                     }
                 }
-            }
+            }.background(Image("bg_home")
+                .scaledToFill()
+                .ignoresSafeArea(.all, edges: .all))
         }
     }
 }
