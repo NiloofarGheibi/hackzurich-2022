@@ -67,6 +67,9 @@ struct CardView: View {
                 .gesture(
                     DragGesture()
                         .onChanged { value in
+                            withAnimation(.spring()) {
+                                print("animation")
+                            }
                             self.translation = value.translation
                             if (self.getGesturePercentage(geometry, from: value)) >= self.thresholdPercentage {
                                 self.swipeStatus = .like
@@ -77,7 +80,9 @@ struct CardView: View {
                             }
                             
                         }.onEnded { value in
-                            withAnimation(.interactiveSpring()){}
+                            withAnimation(.spring()) {
+                                print("animation")
+                            }
                             // determine snap distance > 0.5 aka half the width of the screen
                             if abs(self.getGesturePercentage(geometry, from: value)) > self.thresholdPercentage {
                                 self.onRemove(self.card)

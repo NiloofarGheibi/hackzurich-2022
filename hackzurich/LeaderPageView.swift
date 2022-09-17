@@ -46,10 +46,7 @@ struct LeaderPageView: View {
                                 .font(.system(size: 20))
                                 .fontWeight(.bold)
                         }
-                    }.background(Image("bg_share")
-                        .scaledToFill()
-                        .opacity(0.4)
-                        .ignoresSafeArea(.all, edges: .all))
+                    }
                 }
             }
         }

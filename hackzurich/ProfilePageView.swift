@@ -69,7 +69,7 @@ struct Home : View {
             Spacer(minLength: 0)
             
         }
-        .background(Image("bg_profile").ignoresSafeArea(.all, edges: .all))
+        .background(Image("bg_profile").ignoresSafeArea(.all, edges: .all)).scaledToFill()
         
     }
 }

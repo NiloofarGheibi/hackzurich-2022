@@ -39,7 +39,10 @@ struct GuessView: View {
                     })
                 
                 Spacer()
-            }
+            }.background(Image("bg_guess")
+                .scaledToFill()
+                .opacity(0.6)
+                .ignoresSafeArea(.all, edges: .all))
         }
     }
 }

@@ -53,7 +53,7 @@ struct QuizCompletedView: View {
                                .frame(width: nil)
                                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.11372549019607843, green: 0.6313725490196078, blue: 0.9490196078431372)/*@END_MENU_TOKEN@*/)
                                .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                               .cornerRadius(38.0)
+                               .cornerRadius(40)
                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             Spacer()

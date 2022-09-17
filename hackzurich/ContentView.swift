@@ -37,7 +37,10 @@ struct LeaderBoardView : View {
 struct ContentView: View {
     init() {
             UITabBar.appearance().backgroundColor = UIColor.red
-        }
+            UITabBar.appearance().isOpaque = false
+            UITabBar.appearance().unselectedItemTintColor = UIColor.white
+            UITabBar.appearance().tintColor = UIColor.black
+    }
     var body: some View {
         TabView {
             HomeView()
@@ -51,7 +54,6 @@ struct ContentView: View {
                     Image(systemName: "person")
                     Text("Profile")
                 }
-            
             LeaderBoardView()
                 .tabItem {
                     Image(systemName: "person.3.sequence")
