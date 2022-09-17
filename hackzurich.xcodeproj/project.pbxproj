@@ -11,6 +11,7 @@
 		5368476128D52C44001FDE74 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368476028D52C44001FDE74 /* CardView.swift */; };
 		5368476328D52CB8001FDE74 /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368476228D52CB8001FDE74 /* GuessView.swift */; };
 		5368476528D52CE5001FDE74 /* BetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368476428D52CE5001FDE74 /* BetView.swift */; };
+		5368476928D53D3C001FDE74 /* LeaderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368476828D53D3C001FDE74 /* LeaderPageView.swift */; };
 		53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */; };
 		53E0E51D28D05EB600EF06FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E0E51C28D05EB600EF06FF /* ContentView.swift */; };
 		53E0E51F28D05EB800EF06FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E0E51E28D05EB800EF06FF /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		5368476028D52C44001FDE74 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5368476228D52CB8001FDE74 /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		5368476428D52CE5001FDE74 /* BetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetView.swift; sourceTree = "<group>"; };
+		5368476828D53D3C001FDE74 /* LeaderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderPageView.swift; sourceTree = "<group>"; };
 		53E0E51728D05EB600EF06FF /* hackzurich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackzurich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E0E51A28D05EB600EF06FF /* hackzurichApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackzurichApp.swift; sourceTree = "<group>"; };
 		53E0E51C28D05EB600EF06FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				5368475E28D5212C001FDE74 /* HomePageView.swift */,
 				53E0E51E28D05EB800EF06FF /* Assets.xcassets */,
 				53E0E52028D05EB800EF06FF /* Preview Content */,
+				5368476828D53D3C001FDE74 /* LeaderPageView.swift */,
 			);
 			path = hackzurich;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				5368476328D52CB8001FDE74 /* GuessView.swift in Sources */,
 				5368475F28D5212C001FDE74 /* HomePageView.swift in Sources */,
 				5368476128D52C44001FDE74 /* CardView.swift in Sources */,
+				5368476928D53D3C001FDE74 /* LeaderPageView.swift in Sources */,
 				53E0E51B28D05EB600EF06FF /* hackzurichApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

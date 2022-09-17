@@ -31,7 +31,7 @@ struct LeaderBoardView : View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.green
+                LeaderPageView()
             }
             .navigationTitle("Leader Board")
         }
