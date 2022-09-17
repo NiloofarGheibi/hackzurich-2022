@@ -17,7 +17,7 @@ struct HomePageView: View {
                 VStack (spacing: 0) {
                     VStack (spacing: 60){
                         Button(action: singlePlayer, label: {
-                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())) {
+                            NavigationLink(destination: CardContentView()) {
                                 Text("Single Player")
                             }
                                     .padding()
