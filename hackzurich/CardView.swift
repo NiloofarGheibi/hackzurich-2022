@@ -61,6 +61,7 @@ struct CardView: View {
                 .frame(width: 360, height: 420)
                 .background(Image("\(self.card.image)").ignoresSafeArea(.all, edges: .all))
                 .cornerRadius(10)
+                .foregroundColor(.white)
                 .shadow(radius: 5)
                 .offset(x: self.translation.width, y: 0)
                 .rotationEffect(.degrees(Double(self.translation.width / geometry.size.width) * 25), anchor: .bottom)

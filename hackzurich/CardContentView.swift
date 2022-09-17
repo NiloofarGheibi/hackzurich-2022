@@ -18,16 +18,16 @@ struct CardContentView: View {
     var gameManagerVM: CardManagerVM
     /// List of users
     @State var users: [CardQuestion] = [
-        CardQuestion(id: 0, image: "bg_share", question: "Cindy", answer: true),
-        CardQuestion(id: 1, image: "bg_share", question: "Mark", answer: false),
-        CardQuestion(id: 2, image: "bg_share", question: "Clayton", answer: true),
-        CardQuestion(id: 3, image: "bg_share", question: "Brittni",answer: false),
-        CardQuestion(id: 4, image: "bg_share", question: "Archie", answer: true),
-        CardQuestion(id: 5, image: "bg_share", question: "James", answer: true),
-        CardQuestion(id: 6, image: "bg_share", question: "Danny", answer: false),
-        CardQuestion(id: 7, image: "bg_share", question: "Chi",answer: true),
-        CardQuestion(id: 8, image: "bg_share", question: "Josue",answer: false),
-        CardQuestion(id: 9, image: "bg_share", question: "Debra", answer: true)
+        CardQuestion(id: 0, image: "bg_die", question: "In 2016, some 12% of the 22,500 kilometres of piste in Switzerland were created with artificial snow", answer: false),
+        CardQuestion(id: 1, image: "bg_mountain", question: "By the end of the 21st century, remnants of the great glaciers will only remain at very high elevations.", answer: false),
+        CardQuestion(id: 2, image: "bg_share", question: "Tourism generates an annual turnover of CHF 1 billion for the Swiss economy. ", answer: false),
+        CardQuestion(id: 3, image: "bg_ice", question: "The typical level of consumption in a four-person household is 1000 kWh.",answer: false),
+        CardQuestion(id: 4, image: "bg_dry", question: "In the past 7500 years, it has never been as warm in the Arctic as it is now", answer: true),
+        CardQuestion(id: 5, image: "bg_tree", question: "Over the past 150 years the average annual air temperature in Switzerland has risen by around 2 °C, which is twice the global average", answer: true),
+        CardQuestion(id: 6, image: "bg_cable", question: "The Swiss glaciers have already lost 5% of their volume since 1850", answer: false),
+        CardQuestion(id: 7, image: "bg_share", question: "Water consumption has decreased slightly since the 1990s, but has begun to increase again in recent years",answer: true),
+        CardQuestion(id: 8, image: "bg_dry", question: "The temperatures of most watercourses have increased significantly since the 1970s",answer: true),
+        CardQuestion(id: 9, image: "bg_mountain", question: "Plateau to rise by a further 2–3°C by the end of the 21st century", answer: false)
     ]
     
     /// Return the CardViews width for the given offset in the array
