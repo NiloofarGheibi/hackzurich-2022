@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     @State private var translation: CGSize = .zero
     @State private var swipeStatus: LikeDislike = .none
+    @State private var color: Color = .black
         
         private var card: CardQuestion
         private var onRemove: (_ user: CardQuestion) -> Void
@@ -78,9 +79,9 @@ struct CardView: View {
                 .padding(.bottom)
                 .frame(width: 320, height: 420)
                 .background(Color.white)
+                .foregroundColor(color.opacity(0.9))
                 .cornerRadius(10)
                 .shadow(radius: 5)
-                .animation(.interactiveSpring())
                 .offset(x: self.translation.width, y: 0)
                 .rotationEffect(.degrees(Double(self.translation.width / geometry.size.width) * 25), anchor: .bottom)
                 .gesture(
@@ -96,7 +97,9 @@ struct CardView: View {
                                 self.swipeStatus = .none
                             }
                             
+                           
                     }.onEnded { value in
+                       
                         // determine snap distance > 0.5 aka half the width of the screen
                             if abs(self.getGesturePercentage(geometry, from: value)) > self.thresholdPercentage {
                                 self.onRemove(self.card)
