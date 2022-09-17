@@ -2,7 +2,7 @@
 //  ReusableText.swift
 //  AKQuiz
 //
-//  Created by Isabelly Rocha
+//  Created by Rocha, Isabelly on 16.09.22.
 //
 import Foundation
 import SwiftUI

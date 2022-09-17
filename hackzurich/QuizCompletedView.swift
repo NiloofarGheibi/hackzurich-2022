@@ -2,7 +2,7 @@
 //  QuizCompletedView.swift
 //  AKQuiz
 //
-//  Created by richa.e.srivastava on 16/11/2021.
+//  Created by Rocha, Isabelly on 16.09.22.
 //
 import Foundation
 import SwiftUI

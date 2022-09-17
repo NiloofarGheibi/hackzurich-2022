@@ -11,7 +11,7 @@ struct HomeView : View {
     var body: some View {
         NavigationView {
              HomePageView()
-            .navigationTitle("Home")
+            //.navigationTitle("Home")
         }
     }
 }
@@ -22,7 +22,7 @@ struct ProfileView : View {
             ZStack {
                 Color.blue
             }
-            .navigationTitle("Profile")
+            //.navigationTitle("Profile")
         }
     }
 }
@@ -33,7 +33,7 @@ struct LeaderBoardView : View {
             ZStack {
                 Color.green
             }
-            .navigationTitle("Leader Board")
+            //.navigationTitle("Leader Board")
         }
     }
 }
