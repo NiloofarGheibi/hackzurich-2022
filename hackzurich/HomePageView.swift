@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @State var navigated = false
+    @State private var showingSingleView = false
+    @State private var showingMultiView = false
+    @State private var showingGuessView = false
+
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 VStack (spacing: 0) {
-                    VStack (spacing: 80){
+                    VStack (spacing: 80) {
                         Button(action: singlePlayer, label: {
-                            NavigationLink(destination: CardContentView(gameManagerVM: CardManagerVM())){
+                            NavigationLink(destination: CardContentView(gameManagerVM: CardManagerVM()), isActive: $showingSingleView){
                                 Text("Flash Cards")
                                     .padding()
                                     .frame(width:300, height: 90)
@@ -24,10 +27,16 @@ struct HomePageView: View {
                                     .font(.system(size: 20))
                                     .fontWeight(.bold)
                                     .cornerRadius(15)
-                            }})
+                            }
+                            .onTapGesture {
+                                showingSingleView = true
+                            }.onChange(of: showingSingleView) { newValue in
+                                print(newValue) // Will change to false when back is pressed
+                            }
+                        })
                         
-                        Button(action: singlePlayer, label: {
-                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())){
+                        Button(action: multiPlayer, label: {
+                            NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM()), isActive: $showingMultiView){
                                 Text("Multiple Choice")
                                     .padding()
                                     .font(.system(size: 20))
@@ -36,11 +45,17 @@ struct HomePageView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                                     .cornerRadius(15)
-                            }})
+                            }
+                            .onTapGesture {
+                                showingMultiView = true
+                            }.onChange(of: showingMultiView) { newValue in
+                                print(newValue) // Will change to false when back is pressed
+                            }
+                        })
                         
                         
-                        Button(action: singlePlayer, label: {
-                            NavigationLink(destination: GuessView()){
+                        Button(action: guessing, label: {
+                            NavigationLink(destination: GuessView(), isActive: $showingGuessView){
                                 Text("Guess Game")
                                     .padding()
                                     .font(.system(size: 20))
@@ -49,7 +64,13 @@ struct HomePageView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                                     .cornerRadius(15)
-                            }})
+                            }
+                            .onTapGesture {
+                                showingGuessView = true
+                            }.onChange(of: showingGuessView) { newValue in
+                                print(newValue) // Will change to false when back is pressed
+                            }
+                        })
                     }
                 }
             }.background(Image("bg_home")
@@ -65,7 +86,7 @@ func singlePlayer() {
 func multiPlayer() {
 
 }
-func betting() {
+func guessing() {
     
 }
 
