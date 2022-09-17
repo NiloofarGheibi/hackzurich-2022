@@ -11,8 +11,8 @@ struct CardView: View {
     @State private var translation: CGSize = .zero
     @State private var swipeStatus: LikeDislike = .none
         
-        private var user: User
-        private var onRemove: (_ user: User) -> Void
+        private var card: CardQuestion
+        private var onRemove: (_ user: CardQuestion) -> Void
         
         private var thresholdPercentage: CGFloat = 0.2 // when the user has draged 50% the width of the screen in either direction
         
@@ -20,8 +20,8 @@ struct CardView: View {
             case like, dislike, none
         }
         
-        init(user: User, onRemove: @escaping (_ user: User) -> Void) {
-            self.user = user
+        init(card: CardQuestion, onRemove: @escaping (_ user: CardQuestion) -> Void) {
+            self.card = card
             self.onRemove = onRemove
         }
         
@@ -37,12 +37,6 @@ struct CardView: View {
             GeometryReader { geometry in
                 VStack(alignment: .leading) {
                      ZStack(alignment: self.swipeStatus == .like ? .topLeading : .topTrailing) {
-                        Image(self.user.imageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: geometry.size.width, height: geometry.size.height * 0.75)
-                            .clipped()
-                        
                         if self.swipeStatus == .like {
                             Text("TRUE!")
                                 .font(.headline)
@@ -70,15 +64,9 @@ struct CardView: View {
                     
                     HStack {
                         VStack(alignment: .leading, spacing: 6) {
-                            Text("\(self.user.question) \(self.user.lastName), \(self.user.age)")
+                            Text("\(self.card.question)")
                                 .font(.title)
                                 .bold()
-                            Text(self.user.occupation)
-                                .font(.subheadline)
-                                .bold()
-                            Text("\(self.user.mutualFriends) Mutual Friends")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
                         }
                         Spacer()
                         
@@ -88,6 +76,7 @@ struct CardView: View {
                     .padding(.horizontal)
                 }
                 .padding(.bottom)
+                .frame(width: 320, height: 420)
                 .background(Color.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
@@ -110,7 +99,7 @@ struct CardView: View {
                     }.onEnded { value in
                         // determine snap distance > 0.5 aka half the width of the screen
                             if abs(self.getGesturePercentage(geometry, from: value)) > self.thresholdPercentage {
-                                self.onRemove(self.user)
+                                self.onRemove(self.card)
                             } else {
                                 self.translation = .zero
                             }
@@ -123,7 +112,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: User(id: 1, question: "Mark", lastName: "Bennett", age: 27, mutualFriends: 0, imageName: "person_1", occupation: "Insurance Agent"),
+        CardView(card: CardQuestion(id: 1, question: "Mark", answer: true),
                  onRemove: { _ in
             // do nothing
         })

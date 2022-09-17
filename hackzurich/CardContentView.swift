@@ -8,34 +8,26 @@
 import SwiftUI
 
 
-struct User: Hashable, CustomStringConvertible {
+struct CardQuestion: Hashable {
     var id: Int
     
     let question: String
-    let lastName: String
-    let age: Int
-    let mutualFriends: Int
-    let imageName: String
-    let occupation: String
-    
-    var description: String {
-        return "\(question), id: \(id)"
-    }
+    let answer: Bool
 }
 
 struct CardContentView: View {
     /// List of users
-    @State var users: [User] = [
-        User(id: 0, question: "Cindy", lastName: "Jones", age: 23, mutualFriends: 4, imageName: "person_1", occupation: "Coach"),
-        User(id: 1, question: "Mark", lastName: "Bennett", age: 27, mutualFriends: 0, imageName: "person_2", occupation: "Insurance Agent"),
-        User(id: 2, question: "Clayton", lastName: "Delaney", age: 20, mutualFriends: 1, imageName: "person_3", occupation: "Food Scientist"),
-        User(id: 3, question: "Brittni", lastName: "Watson", age: 19, mutualFriends: 4, imageName: "person_4", occupation: "Historian"),
-        User(id: 4, question: "Archie", lastName: "Prater", age: 22, mutualFriends:18, imageName: "person_5", occupation: "Substance Abuse Counselor"),
-        User(id: 5, question: "James", lastName: "Braun", age: 24, mutualFriends: 3, imageName: "person_6", occupation: "Marketing Manager"),
-        User(id: 6, question: "Danny", lastName: "Savage", age: 25, mutualFriends: 16, imageName: "person_7", occupation: "Dentist"),
-        User(id: 7, question: "Chi", lastName: "Pollack", age: 29, mutualFriends: 9, imageName: "person_8", occupation: "Recreational Therapist"),
-        User(id: 8, question: "Josue", lastName: "Strange", age: 23, mutualFriends: 5, imageName: "person_9", occupation: "HR Specialist"),
-        User(id: 9, question: "Debra", lastName: "Weber", age: 28, mutualFriends: 13, imageName: "person_10", occupation: "Judge")
+    @State var users: [CardQuestion] = [
+        CardQuestion(id: 0, question: "Cindy", answer: true),
+        CardQuestion(id: 1, question: "Mark", answer: false),
+        CardQuestion(id: 2, question: "Clayton", answer: true),
+        CardQuestion(id: 3, question: "Brittni",answer: false),
+        CardQuestion(id: 4, question: "Archie", answer: true),
+        CardQuestion(id: 5, question: "James", answer: true),
+        CardQuestion(id: 6, question: "Danny", answer: false),
+        CardQuestion(id: 7, question: "Chi",answer: true),
+        CardQuestion(id: 8, question: "Josue",answer: false),
+        CardQuestion(id: 9, question: "Debra", answer: true)
     ]
     
     /// Return the CardViews width for the given offset in the array
@@ -75,7 +67,7 @@ struct CardContentView: View {
                             Group {
                                 // Range Operator
                                 if (self.maxID - 3)...self.maxID ~= user.id {
-                                    CardView(user: user, onRemove: { removedUser in
+                                    CardView(card: user, onRemove: { removedUser in
                                         // Remove that user from our array
                                         self.users.removeAll { $0.id == removedUser.id }
                                     })
