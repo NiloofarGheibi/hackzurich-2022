@@ -21,7 +21,9 @@ struct ProfileView : View {
         NavigationView {
             ZStack {
                 Color.blue
+                ProfilePageView()
             }
+            
             //.navigationTitle("Profile")
         }
     }

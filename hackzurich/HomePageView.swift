@@ -30,7 +30,7 @@ struct HomePageView: View {
                         
                         Button(action: multiPlayer, label: {
                             NavigationLink(destination: MultiPageView(gameManagerVM: GameManagerVM())) {
-                                Text("Multiple-Choice Quizz")
+                                Text("Multiple-Choice")
                             }
                                     .padding()
                                     .frame(width:300)
