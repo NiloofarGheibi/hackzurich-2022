@@ -94,18 +94,14 @@ struct CardContentView: View {
         var body: some View {
             VStack {
                 HStack {
-                    VStack(alignment: .leading) {
-                        Text("Match it right")
-                            .font(.title)
-                            .bold()
-                        Text("👈 no - yes 👉")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+                    VStack(alignment: .center) {
+                        ReusableText(text: "Match it right", size: 30)
+                            .padding()
                     }
                     Spacer()
                 }.padding()
             }
-            .background(Color.white)
+            .background(Color.red)
             .cornerRadius(10)
             .shadow(radius: 5)
         }
