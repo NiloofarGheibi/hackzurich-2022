@@ -5,7 +5,13 @@
     <img src="logo.png" alt="Logo" width="250" height="200">
   </a>
 
-<h2 align="center">QuizzLand</h2>
+<h2 align="center">QuizzerLand</h2>
+
+## Team
+
+Mariya Blavachinskaya
+Niloofar Gheibi
+Isabelly Rocha
 
 ## Summary
 
