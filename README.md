@@ -5,7 +5,7 @@
     <img src="logo.png" alt="Logo" width="250" height="200">
   </a>
 
-<h2 align="center">Hackzurich 2022</h2>
+<h2 align="center">QuizzLand</h2>
 
 ## Summary
 
