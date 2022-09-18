@@ -1,17 +1,14 @@
-<h2 align="center">Hackzurich 2022</h2>
-<br />
 <p align="center">
   <a href="https://github.com/NiloofarGheibi/hackzurich-2022">
     <img src="logo.png" alt="Logo" width="250" height="200">
   </a>
-
-<h2 align="center">QuizzerLand</h2>
+<h2 align="center">QuizzerLand - Hackzurich 2022</h2>
 
 ## Team
 
-Mariya Blavachinskaya
-Niloofar Gheibi
-Isabelly Rocha
+- Isabelly Rocha
+- Mariya Blavachinskaya
+- Niloofar Gheibi
 
 ## Summary
 
